@@ -12,6 +12,7 @@
 #include <netinet/in.h>
 #include <arpa/inet.h>
 #include <fcntl.h>
+#include <unistd.h>
 
 int inet_generic_ntop(struct sockaddr *src, char *ip, int size);
 int inet_generic_port(struct sockaddr *src, int *port);

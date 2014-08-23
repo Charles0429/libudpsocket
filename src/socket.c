@@ -115,7 +115,7 @@ int create_socket(const char *host, const char *service,
             break;
         }
         perror("socket create");
-    }while(res = res->ai_next);
+    }while((res = res->ai_next));
 
     if(res == NULL)
     {
@@ -181,7 +181,7 @@ int tcp_client_socket(const char *host, const char *service,
         {
             break;
         }
-    }while(res = res->ai_next);
+    }while((res = res->ai_next));
 
     if(server_addr)
     {
